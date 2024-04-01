@@ -1,0 +1,38 @@
+----public class MathOperations {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 5;
+        int sum = a + b;
+        int product = a * b;
+        System.out.println("Sum: " + sum);
+        System.out.println("Product: " + product);
+    }
+-----output15
+
+import java.util.Scanner;
+
+public class GetUserInput {
+ public static void main(String[] args) {
+     Scanner scanner = new Scanner(System.in);
+     System.out.print("Enter your name: ");
+     String name = scanner.nextLine();
+     System.out.println("Hello, " + name + "!");
+ }
+}
+Java Program to Swap Two Numbers:
+
+public class SwapNumbers {
+ public static void main(String[] args) {
+     int a = 10;
+     int b = 20;
+     
+     System.out.println("Before swapping - a: " + a + ", b: " + b);
+     
+     int temp = a;
+     a = b;
+     b = temp;
+     
+     System.out.println("After swapping - a: " + a + ", b: " + b);
+ }
+}
+-----
