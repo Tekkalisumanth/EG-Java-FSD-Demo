@@ -1,0 +1,112 @@
+Task no.01
+----------
+1) 1) //float r=2.5f % 2; //0.5 --commented ----> how is this 0.5 comes as result?
+
+        float r = 2.5f / 2; //1.25
+        System.out.println(r);
+    
+    ------>  output =1.25
+
+  EXPLATION
+-------------
+
+ *  2.5f is a floating-point literal representing the number  2.5.
+ *  is the modulus operator, which calculates the remainder when the left operand (2.5f) is divided by the right operand ('2').
+ *  2 is an integer literal.
+ * The result of the modulus operation (2.5f % 2) is assigned to the variable r, which is declared as a float.
+ * Finally, the value of r (which is 0.5) is printed to the console.
+
+
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Task no.02
+-----------
+2) Write a program for the below mentioned scenario?
+
+23 ==> 2+3=5
+54 ==> 5+4=9
+33 ==> 3+3=9
+19 ==> 1+9=10=1+0 // no need for this
+//55,65 - no need
+
+int r=14; //use only literals  (hardcoded values)
+
+
+public class SumOfDigits {
+    public static void main(String[] args) {
+        // Array of numbers
+        int[] numbers = {23, 54, 33, 43, 31};
+        
+        // Iterate through each number
+        for (int number;)
+
+            // Extract tens and ones digits
+            int tens = number / 10;
+            int ones = number % 10;
+            
+            // Calculate sum of digits
+            int sum = tens + ones;
+            
+            // Print the result
+            System.out.println("Sum of the digits " + number + " ==> " + tens + "+" + ones + " ==> " + sum);
+        }
+    }
+
+
+OUTPUT=
+--------
+Sum of the digits 23 ==> 2+3 ==> 5
+Sum of the digits 54 ==> 5+4 ==> 9
+Sum of the digits 33 ==> 3+3 ==> 6
+Sum of the digits 43 ==> 4+3 ==> 7
+Sum of the digits 31 ==> 3+1 ==> 4
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Task no.3
+---------
+
+
+Class decrementaloperators {
+    public static void main(String[] args) {
+
+        int c = 10;
+        int e = 5;
+
+        c /= 2; 
+        e %= 2; 
+
+        System.out.println("c after division: " + c); 
+        System.out.println("e after modulo: " + e); 
+
+       
+       int postDecrementC = c--;
+        System.out.println("Post-decrement c: " + postDecrementC);
+        System.out.println("c after post-decrement: " + c); 
+
+        int preDecrementE = --e;
+        System.out.println("Pre-decrement e: " + preDecrementE); 
+        System.out.println("e after pre-decrement: " + e);
+    }
+}
+
+
+OUTPUT=
+--------
+c  division: 5
+e  modulo: 1
+Post-decrement c: 5
+c after post-decrement: 4
+Pre-decrement e: 2
+e after pre-decrement: 0
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
