@@ -54,46 +54,6 @@ Sum of the digits 31 ==> 3+1 ==> 4
 
 ______________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-Task no.3
----------
-
-
-Class decrementaloperators {
-    public static void main(String[] args) {
-        int c = 10;
-        int e = 5;
-        c /= 2; 
-        e %= 2; 
-
-        System.out.println("c after division: " + c); 
-        System.out.println("e after modulo: " + e); 
-
-       int postDecrementC = c--;
-        System.out.println("Post-decrement c: " + postDecrementC);
-        System.out.println("c after post-decrement: " + c); 
-
-        int preDecrementE = --e;
-        System.out.println("Pre-decrement e: " + preDecrementE); 
-        System.out.println("e after pre-decrement: " + e);
-    }
-}
-
-
-OUTPUT=
---------
-c  division: 5
-e  modulo: 1
-Post-decrement c: 5
-c after post-decrement: 4
-Pre-decrement e: 2
-e after pre-decrement: 0
-
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________
-
-
-
-
-
 
 
 
