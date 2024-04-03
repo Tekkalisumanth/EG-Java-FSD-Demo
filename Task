@@ -1,0 +1,103 @@
+                                                                                               TASK no.01
+                                                                                           -------------------
+
+public class ForLoopVariations {
+    public static void main(String[] args) {
+        
+        int i1 = 90;
+        for (; i1 > 100; i1++);
+
+        int i2 = 90;
+        for (; i2 > 100; i2--);
+                                                                               
+        int i3 = 90;
+        for (; ; i3++);
+       
+        int i4 = 90;
+        for (; i4 < 100; i4++);
+
+        int i5 = 90;
+        for (; i5 < 100; i5 += 2) 
+
+    
+}  
+           System.out.println("Output for loop 1: No output as loop condition is false initially");
+           System.out.println("Output for loop 2: No output as loop condition is false initiall");
+           System.out.println("Output for loop 3: i3 = " + i3);
+           System.out.println("Output for loop 4: i4 = " + i4);
+           System.out.println("Output for loop 5: i5 = " + i5);
+        }
+    }
+}
+
+
+          OUTPUT
+       ============
+
+    Output for loop 1: No output as loop condition is false initially
+Output for loop 2: No output as loop condition is false initially
+Output for loop 3: i3 = 90
+Output for loop 3: i3 = 91
+Output for loop 3: i3 = 92
+...
+Output for loop 3: i3 = 999
+Output for loop 3: i3 = 1000
+Output for loop 4: i4 = 90
+Output for loop 4: i4 = 91
+Output for loop 4: i4 = 92
+...
+Output for loop 4: i4 = 99
+Output for loop 5: i5 = 90
+Output for loop 5: i5 = 92
+Output for loop 5: i5 = 94
+Output for loop 5: i5 = 96
+Output for loop 5: i5 = 98
+
+
+Explanation:
+============
+Explanation:
+
+1.  The first and second loops have conditions that are false initially, so they won't execute at all.
+2.  The third loop has no condition, so it will run indefinitely until it's interrupted by a break statement. In this example, it's terminated after 1000 iterations.
+3.  The fourth loop will execute until i4 reaches 100, incrementing i4 by 1 in each iteration.
+4.  The fifth loop will execute until i5 reaches 100, incrementing i5 by 2 in each iteration.
+
+
+_______________________________________________________________________________________________________________________________________________________________________________________________________-
+
+                                                                                                TASK no.2
+                                                                                          ------------------------
+
+
+public class SingleDigitSum {
+    public static void main(String[] args) {
+       
+        int[] numbers = {23, 33, 56, 456, 1245};
+        for (int num : numbers) 
+            int temp = num;
+            while (temp > 9);
+                int sum = 0;
+                while (temp != 0) {
+                    sum += temp % 10;
+                    temp /= 10;
+                }
+                temp = sum;
+            }
+            System.out.println("Reduced form of " + num + ": " + temp);
+        }
+
+
+         OUTPUT
+  ====================
+
+ 23: 5
+ 33: 6
+ 56: 2
+ 456: 6
+ 1245: 3
+
+
+    Explanation:
+======================
+This program takes an array of numbers and reduces each number to a single digit by summing its digits repeatedly until a single digit is obtained.
