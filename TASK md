@@ -26,7 +26,7 @@ FINALLY OUTPUT
 Explanation:
 ------------
 
-This code prints out the key components of the Java Virtual Machine (JVM) architecture.
+*This code prints out the key components of the Java Virtual Machine (JVM) architecture.
 Each println statement represents one component:
 
 "1. Class Loader": Loads .class files into JVM memory.
