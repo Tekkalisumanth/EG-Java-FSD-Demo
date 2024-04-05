@@ -1,0 +1,82 @@
+                                                                                                                TASK
+                                                                                                          ================
+
+
+public class Bike {
+    private String brand;
+    private int gear;
+    private double speed;
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public int getGear() {
+        return gear;
+    }
+
+    public void setGear(int gear) {
+        this.gear = gear;
+    }
+
+    public double getSpeed() {
+        return speed;
+    }
+
+    // Setter method for speed
+    public void setSpeed(double speed) {
+        this.speed = speed;
+    }
+
+    // Method to increase speed
+    public void accelerate(double increment) {
+        this.speed += increment;
+    }
+
+    // Method to decrease speed
+    public void brake(double decrement) {
+        this.speed -= decrement;
+    }
+
+    public static void main(String[] args) {
+        // Creating an object of Bike class
+        Bike bike = new Bike();
+
+========> Setting values using setter
+        bike.setBrand("Trek");
+        bike.setGear(5);
+        bike.setSpeed(20.0);
+
+    
+        System.out.println("Bike Brand: " + bike.getBrand());
+        System.out.println("Gear: " + bike.getGear());
+        System.out.println("Speed: " + bike.getSpeed());
+
+ ======> Accelerating the bike
+        bike.accelerate(10.0);
+
+       
+        System.out.println("Updated Speed after accelerating: " + bike.getSpeed());
+
+========> Braking the bike
+         bike.brake(5.0);
+
+========> Displaying the updated speed after braking
+        System.out.println("Updated Speed after braking: " + bike.getSpeed());
+    }
+}
+
+
+
+OUTPUT
+======
+Bike Brand: Trek
+Gear: 5
+Speed: 20.0
+Updated Speed after accelerating: 30.0
+Updated Speed after braking: 25.0
+
