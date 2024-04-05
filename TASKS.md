@@ -1,18 +1,94 @@
-**DAY 2 Questions 28/03/2024**
+                                                                               TASK
+                                                                           =============
 
-1. Write an algorithm for driving from your place to your favourite destination.
-2. Write an algorithm for Registering & logging into your website.
-3. Write an algorithm to check if a number is negative number or positive number
-4. Write an algorithm to check if a number is prime
-5. Write an algorithm to check if a number is amstrong
-6. Write an algorithm to check if a year is leap year or not
-7. Write an algorithm to find n factorial of a number
-8. Write an algorithm to find fibbonacci of a given number
-9. Write an algorithm to find even numbers existing in a an array between the starting and ending position you give.
-10. Write an algorithm to find the sum of sub-array you pick dynamically should be greater than 10 and copy those values (not the sum) into another array.
+                                                                      
 
-`
-* **To be completed by 29/03/2024 EOD**
-* **You can use ChatGPT but need to articulate it properly**
-* **last 2 qns are very important**
-`
+
+
+
+Question 1: Inside JVM Architecture :
+-------------------------------------
+
+public class InsideJVMArchitecture {
+    public static void main(String[] args) {
+        System.out.println("1. Class Loader");
+        System.out.println("2. Bytecode Verifier");
+        System.out.println("3. JIT/AOT Compiler");
+        System.out.println("4. Security Manager");
+    }
+}
+
+OUTPUT
+-------
+1. Class Loader
+2. Bytecode Verifier
+3. JIT/AOT Compiler
+4. Security Manager
+
+
+
+Explanation:
+-------------
+
+This code prints out the key components of the Java Virtual Machine (JVM) architecture.
+Each println statement represents one component:
+"1. Class Loader": Loads .class files into JVM memory.
+"2. Bytecode Verifier": Ensures validity and security of .class files.
+"3. JIT/AOT Compiler": Optimizes bytecode for faster execution.
+"4. Security Manager": Enforces security policies.
+
+______________________________________________________________________________________________________________________________________________________________
+
+Question 2: Java Editions
+--------------------------
+Question 2: Java Editions
+
+java
+Copy code
+public class Editions {
+    public static void main(String[] args) {
+        System.out.println("Java Editions:");
+        System.out.println("- SE: General-purpose");
+        System.out.println("- EE: Enterprise-level");
+        System.out.println("- ME: Mobile & embedded");
+
+        System.out.println("\nNomenclature:");
+        System.out.println("- JDK: Development Kit");
+        System.out.println("- J2SE: Former name");
+        System.out.println("- SE: Current standard");
+    }
+}
+
+OUTPUT
+-------
+Java Editions:
+- SE: General-purpose
+- EE: Enterprise-level
+- ME: Mobile & embedded
+
+Nomenclature:
+- JDK: Development Kit
+- J2SE: Former name
+- SE: Current standard
+
+
+
+Explanation:
+-------------
+This code presents the different editions of Java along with their brief descriptions.
+Each println statement lists an edition and its purpose:
+
+* "SE: General-purpose": Java Standard Edition for general programming.
+*"EE: Enterprise-level": Java Enterprise Edition for enterprise applications.
+*"ME: Mobile & embedded": Java Micro Edition for mobile and embedded devices.
+
+The subsequent println statements explain the nomenclature:
+
+*"JDK: Development Kit": Java Development Kit, comprising tools for development.
+*"J2SE: Former name": Java 2 Standard Edition, the previous name for Java SE.
+*"SE: Current standard": Java SE, the current standard edition of Java.
+
+
+
+
+
