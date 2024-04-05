@@ -27,17 +27,16 @@ public class Bike {
         return speed;
     }
 
-    // Setter method for speed
+=======>    Setter method for speed
     public void setSpeed(double speed) {
         this.speed = speed;
     }
 
-    // Method to increase speed
-    public void accelerate(double increment) {
+      public void accelerate(double increment) {
         this.speed += increment;
     }
 
-    // Method to decrease speed
+=====>     Method to decrease speed
     public void brake(double decrement) {
         this.speed -= decrement;
     }
