@@ -1,0 +1,60 @@
+                                                                                   TASK
+                                                                            -----------------
+
+QUESTION
+---------
+// psvm(args)
+// 1. write without arg
+// 2. spvm(args)
+// 3. psm(args)
+// 4....
+
+check for the possibilitieS
+
+
+
+public class Main {
+    public static void main() {
+        System.out.println("Without arguments");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("With arguments");
+    }
+
+  
+    public static void psvm(String[] args) {
+        System.out.println("Using shorthand \"psvm\"");
+    }
+
+    
+    static void main(String[] args) {
+        System.out.println("Using different access modifiers");
+    }
+
+    public static void main(String args[]) {
+        System.out.println("Using \"String args[]\" instead of \"String[] args\"");
+    }
+
+
+    public static void main(String... args) {
+        System.out.println("Using varargs for the arguments");
+    }
+
+ 
+    public static int main(String[] args) {
+        System.out.println("Using a different return type");
+        return 0;
+    }
+}
+
+
+OUTPUT
+-------
+
+===> With arguments
+===> Using different access modifiers
+===> Using varargs for the arguments
+===> Using "String args[]" instead of "String[] args"
+===> Without arguments
+===> Using shorthand "psvm"
