@@ -1,0 +1,163 @@
+                                                                                                                  TASK
+                                                                                                              -------------
+
+QUESTION NO.01
+===============
+
+purpose of making constructer as private?
+
+
+ Making a constructor private serves the purpose of controlling how instances of a class are created.
+ This is often employed in design patterns like Singleton or Factory Method, or to prevent direct instantiation and hide complex initialization logic.
+ By restricting access to the constructor, you can enforce specific usage patterns and enhance the maintainability of your code.
+
+EXAMPLE:
+=======
+
+public class Example {
+    private Example() {
+       
+     System.out.println("Constructor is private.");    // Private constructor
+    }
+    
+    public static Example createInstance() {      // Static factory method to create an instance
+      
+        return new Example();
+    }
+    
+    public void displayMessage() {
+        System.out.println("This is an example class.");
+    }
+    
+    public static void main(String[] args) {
+        // Attempt to create an instance directly (compile-time error)
+        // Example obj = new Example();
+        
+        // Create an instance using the static factory method
+        Example obj = Example.createInstance();
+        obj.displayMessage();
+    }
+}
+
+OUTPUT
+======
+Constructor is private.
+This is an example class.
+
+
+_______________________________________________________________________________________________________________________________________________________________________-
+
+QUESTION NO.2
+
+Can i make constructer as final - impact?
+
+1. In Java, constructors cannot be declared as final. The final keyword is typically used with variables, methods, or classes, but not constructors. Here's why:
+   Constructor Can't Be Inherited: Constructors are not inherited like methods and fields, so making a constructor final doesn't make sense from an inheritance standpoint.
+2.Subclassing Constraints: If constructors could be declared final, it would restrict subclassing entirely, as subclass constructors implicitly call superclass constructors. This would contradict the principle of inheritance.
+3.Encapsulation: Constructors are a part of a class's API for creating instances. Making them final would limit the flexibility of subclassing and could hinder future modifications or extensions.
+
+public final class FinalClass {
+    private final int value;
+
+    public FinalClass(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
+}
+
+EXPLANATION
+==========
+
+* constructors cannot be declared as final. The final keyword is typically used to restrict inheritance, method overriding, or variable modification. 
+* as final, it cannot be subclassed, so no subclass can create its own constructor. This effectively makes the constructors of that class inaccessible for extension,
+___________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+QUESTION NO.3
+=============
+if a keep integer nearby constructer- what happens?
+
+
+public class Example {
+    private int instanceVariable; // Integer variable nearby constructor
+    
+    public Example(int value) {
+        this.instanceVariable = value;
+    }
+    
+    public int getInstanceVariable() {
+        return instanceVariable;
+    }
+    
+    public static void main(String[] args) {
+        Example obj1 = new Example(10);
+        Example obj2 = new Example(20);
+        
+        System.out.println("obj1: " + obj1.getInstanceVariable());
+        System.out.println("obj2: " + obj2.getInstanceVariable());
+    }
+}
+
+OUTPUT
+======
+obj1: 10
+obj2: 20
+
+Explation
+=========
+
+========>  Each object obj1 and obj2 has its own copy of the myInteger variable.
+========>  When obj1 is created, its constructor initializes myInteger with the value 10.
+========>  When obj2 is created, its constructor initializes myInteger with the value 20.
+========>  Accessing myInteger through the getMyInteger() method for each object returns the respective values initialized in the constructor.
+
+__________________________________________________________________________________________________________________________________________________________________________________________
+
+QUESTION NO.4
+
+if you create 3 object it shouldprint 3 object only once?
+
+public class MyClass {
+    private int myInteger;
+
+    public MyClass(int value) {
+        this.myInteger = value; 
+    }
+
+    public int getMyInteger() {
+        return myInteger;
+    }
+
+    public static void main(String[] args) {
+        MyClass obj1 = new MyClass(10);
+        MyClass obj2 = new MyClass(20);
+        MyClass obj3 = new MyClass(30);
+        
+     
+        System.out.println("MyInteger in obj1: " + obj1.getMyInteger());
+        System.out.println("MyInteger in obj2: " + obj2.getMyInteger());
+        System.out.println("MyInteger in obj3: " + obj3.getMyInteger());
+    }
+}
+
+OUTPUT
+======
+MyInteger: 10
+MyInteger: 20
+MyInteger: 30
+
+
+The code defines a class MyClass with an integer variable myInteger, a constructor to initialize it, and a method to retrieve its value.
+In the main method, it creates an array of MyClass objects, initializes them with different integer values, and prints each object's integer 
+
+
+_________________________________________________________________________________________________________________________________________________________________________________________________________-
+
+
+
+
+
+
+
