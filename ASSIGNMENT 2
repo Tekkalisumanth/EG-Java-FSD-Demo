@@ -1,0 +1,135 @@
+                                                                                                         TASK
+                                                                                                      ===========
+QUESTION
+========
+
+public class UniqueThreeDigitNumbers {
+    public static void main(String[] args) {
+        int count = 0;
+
+        for (int i = 1; i <= 4; i++) {
+            for (int j = 1; j <= 4; j++) {
+                for (int k = 1; k <= 4; k++) {
+                    if (i != j && j != k && k != i) { 
+                        int number = i * 100 + j * 10 + k;
+                        System.out.println(number);
+                        count++;
+                    }
+                }
+            }
+        }
+
+        System.out.println("Total unique three-digit numbers: " + count);
+    }
+}
+
+OUTPUT
+======
+123 124 132 134 142 143 213 214 231 234 241 243 312 314 321 324 341 342 412 413 421 423 431 432 
+Total number of unique three-digit numbers: 24
+
+EXPLANATION
+===========
+
+Sure, let's break down how the code generates the output:
+
+1. **Looping through all possible combinations of digits**:
+   - The code uses nested loops to iterate through all possible combinations of digits 1, 2, 3, and 4. Each loop represents a digit's place value (hundreds, tens, and ones).
+   - The outer loop (`for (int i = 1; i <= 4; i++)`) represents the hundreds place and iterates over digits 1 through 4.
+   - The middle loop (`for (int j = 1; j <= 4; j++)`) represents the tens place and iterates over digits 1 through 4.
+   - The inner loop (`for (int k = 1; k <= 4; k++)`) represents the ones place and iterates over digits 1 through 4.
+
+2. **Forming unique three-digit numbers**:
+   - Inside the innermost loop, the code checks if all digits are different (`if (i != j && i != k && j != k)`). This ensures that each generated number is unique.
+   - If all digits are different, the code constructs a three-digit number using the current values of `i`, `j`, and `k`.
+   - The formula `i * 100 + j * 10 + k` is used to form the three-digit number. For example, if `i = 1`, `j = 2`, and `k = 3`, the number would be `123`.
+
+3. **Displaying the generated numbers**:
+   - After forming each unique three-digit number, the code prints it to the console using `System.out.print(number + " ")`. This prints the number followed by a space, allowing the numbers to be displayed horizontally.
+
+4. **Counting the total number of unique three-digit numbers**:
+   - The code increments a counter (`count`) each time a unique three-digit number is generated.
+  
+5. **Output**:
+   - Finally, the code displays the list of unique three-digit numbers and the total count of unique numbers. Each number is separated by a space, and the total count is shown at the end of the output.
+
+
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+QUESTION
+========
+
+public class PrintOddNumbers {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 99; i++) {
+            if (i % 2 != 0);
+                System.out.println(i);
+            }
+        }
+
+OUTPUT
+======
+1
+3
+5
+7
+9
+11
+13
+...
+95
+97
+99
+
+EXPLANATION
+===========
+
+* The expression i % 2 calculates the remainder when i is divided by 2.
+*If the remainder is not equal to 0, it means that the number is odd (since odd numbers leave a remainder of 1 when divided by 2).
+* When the condition i % 2 != 0 is true, the program prints the current number i using System.out.println(i), which outputs the odd number on a new line. *  By following this logic, the program iterates through numbers from 1 to 99 and prin
+ts each odd number on a separate line, resulting in the desired output of odd numbers from 1 to 99 displayed one per line.
+
+_________________________________________________________________________________________________________________________________________________________________________________________________________
+
+QUESTION
+========
+
+public class ComputeExpression {
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("Please provide an integer as a command-line argument.");
+            return;
+        }
+
+        int n = Integer.parseInt(args[0]);
+
+        int nn = n * 11; 
+        int nnn = n * 111; 
+
+        int result = n + nn + nnn;
+        System.out.println("n + nn + nnn = " + result);
+    }
+}
+
+OUTPUT
+======
+n + nn + nnn = 615
+
+EXPLANATION
+===========
+
+1. public class ComputeExpression { ... }: This declares a public class named ComputeExpression.
+
+2. public static void main(String[] args) { ... }: This is the main method, the entry point of the program. It accepts an array of strings args, which represent the command-line arguments.
+
+3. if (args.length == 0) { ... }: This condition checks if any command-line arguments are provided. If no arguments are provided (args.length equals 0), it prints a message asking the user to provide an integer as a command-line argument and exits the program using return;.
+
+4. int n = Integer.parseInt(args[0]);: This line parses the first command-line argument (assumed to be an integer) and converts it into an integer value, storing it in the variable n.
+
+5.  int nn = n * 11;: This calculates the value of nn by multiplying n by 11.
+
+6.  int nnn = n * 111;: This calculates the value of nnn by multiplying n by 111.
+
+7.  int result = n + nn + nnn;: This computes the final result by adding n, nn, and nnn together.
+
+8.  System.out.println("n + nn + nnn = " + result);: This line prints the expression n + nn + nnn along with its result to the console.
