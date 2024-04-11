@@ -1,0 +1,157 @@
+                                                                                                              TASK
+                                                                                                        ================
+QUESTION NO.1
+=============
+
+
+public class Human extends Primitives {
+
+   
+    public void eat() {
+        
+        if (this instanceof Human) {
+            ((Human) this).eat();
+        } else {
+            super.eat();
+        }
+    }
+
+    public void walk() {
+        System.out.println("walking with 2 legs");
+    }
+
+    public void think() {
+        System.out.println("thinking...");
+    }
+
+    public void talk() {
+        System.out.println("talking...");
+    }
+}
+
+
+OUTPUT
+======
+walking with 2 legs
+thinking...
+talking...
+
+EXPLANATION
+===========
+
+======> The Human class extends the Primitives class, implying that Human inherits all the methods and fields from Primitives.
+======> The Human class overrides the eat method from the Primitives class.
+======> The main method in the Human class is used for demonstration purposes. It creates an instance of Human and invokes its methods.
+
+_______________________________________________________________________________________________________________________________________________________________________________________________
+
+
+QUESTION NO.2
+=============
+
+//father
+class A2 {
+    public A2() {
+        System.out.println("A2");
+    }
+}
+
+//son
+//father
+class B2 extends A2 {
+    public B2() {
+        //A2
+        super();
+        System.out.println("B2");
+    }
+}
+
+//grandson
+class C2 extends B2 {
+    public C2() {
+        //compiler while compiling it adds call to parent constr
+        //B2()- this was given by compiler
+        super();
+        System.out.println("C2");
+    }
+}
+
+public class ConstructorOrder {
+
+    public static void main(String[] args) {
+        C2 obj = new C2(); //A2, B2, then then 	C1
+        System.out.println(obj);
+    }
+
+}
+
+OUTPUT
+======
+A2
+B2
+C2
+
+EXPLANATION
+===========
+
+Class Definitions:
+
+* A2: This is the superclass (father). It has a constructor that prints "A2".
+* B2: This is the subclass (son) of A2. It has a constructor that calls the superclass constructor using super() and prints "B2".
+* C2: This is the subclass (grandson) of B2. It has a constructor that calls the superclass constructor using super() and prints "C2".
+  Constructor Execution:
+
+*  Whn an object of class C2 is created (C2 obj = new C2();), the constructor chain is executed in the following order:
+*  C2 constructor is invoked.
+*  Inside C2's constructor, super() calls the constructor of its superclass B2.
+*  Inside B2's constructor, super() calls the constructor of its superclass A2.
+*  Inside A2's constructor, "A2" is printed.
+*  After A2's constructor finishes, "B2" is printed by B2's constructor.
+*  Finally, "C2" is printed by C2's constructor.
+
+____________________________________________________________________________________________________________________________________________________________________________________________
+
+QUESTION NO.3
+=============
+
+package in.eg.java.demo.day8;
+
+public class Primitives {
+
+    private void kick() {
+        System.out.println("Only certain entities can perform kicking actions.");
+        System.out.println("This action can't be directly inherited or accessed from outside the class.");
+    }
+
+    public void eat() {
+        System.out.println("Performing the action of eating.");
+    }
+
+    public void jump() {
+        System.out.println("Performing the action of jumping.");
+    }
+
+    public void walk() {
+        System.out.println("Walking with 2 legs and 2 hands.");
+    }
+
+    public static void main(String[] args) {
+        Primitives p = new Primitives();
+        p.eat();
+        p.jump();
+        p.walk();
+        // p.kick(); // This would result in a compile-time error as kick() is private
+    }
+}
+
+
+OUTPUT
+======
+Performing the action of eating.
+Performing the action of jumping.
+Walking with 2 legs and 2 hands.
+
+
+
+
+
